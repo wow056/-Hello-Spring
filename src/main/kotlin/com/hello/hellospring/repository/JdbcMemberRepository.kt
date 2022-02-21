@@ -32,7 +32,6 @@ class JdbcMemberRepository(private val dataSource: DataSource): MemberRepository
             throw IllegalStateException(e)
         } finally {
             close(conn, pstmt, rs)
-            conn?.close()
         }
     }
 
