@@ -19,7 +19,7 @@ class MemoryMemberRepositoryTest {
 
         repository.save(member)
 
-        val result = repository.findById(member.id)
+        val result = repository.findById(member.id!!)
 
         assertThat(member).isEqualTo(result)
     }

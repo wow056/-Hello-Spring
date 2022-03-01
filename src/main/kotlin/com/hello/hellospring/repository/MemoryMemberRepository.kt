@@ -10,7 +10,7 @@ class MemoryMemberRepository : MemberRepository {
 
     override fun save(member: Member): Member {
         member.id = ++sequence
-        store[member.id] = member
+        store[member.id!!] = member
         return member
     }
 
